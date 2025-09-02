@@ -4,7 +4,7 @@ import 'package:ree_social_media_app/utils/app_colors.dart';
 
 
 ThemeData dark({Color color = const Color(0xFF2683EB)}) => ThemeData(
-  fontFamily: 'Roboto',
+  fontFamily: 'OpenSans',
   primaryColor: color,
   scaffoldBackgroundColor:AppColors.backgroundColor,
   secondaryHeaderColor:  color.withValues(alpha: 0.4),

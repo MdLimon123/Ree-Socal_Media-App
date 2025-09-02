@@ -39,14 +39,20 @@ flutter:
   assets:
      - assets/icons/
      - assets/language/
+     - assets/fonts/
+     - assets/images/
 
 
-  # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+
+  fonts:
+     - family: OpenSans
+       fonts:
+         - asset: assets/fonts/OpenSans-Bold.ttf
+         - asset: assets/fonts/OpenSans-ExtraBold.ttf
+         - asset: assets/fonts/OpenSans-Light.ttf
+         - asset: assets/fonts/OpenSans-Regular.ttf
+         - asset: assets/fonts/OpenSans-Semibold.ttf
+
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

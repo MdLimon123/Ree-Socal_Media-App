@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:ree_social_media_app/views/screen/Splash/Onboard/onboard_screen1.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -9,6 +11,15 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
+  @override
+  void initState() {
+    Future.delayed(Duration(seconds: 3), () {
+      Get.to(()=> OnboardScreen1());
+    });
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,6 +35,14 @@ class _SplashScreenState extends State<SplashScreen> {
               Color(0xFFE6E6E6)
             ]
           )
+        ),
+        child: Center(
+          child: Text("re:",
+          style: TextStyle(
+            fontSize: 100,
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),),
         ),
     ));
   }

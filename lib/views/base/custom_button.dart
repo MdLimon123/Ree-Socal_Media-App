@@ -26,17 +26,17 @@ class CustomButton extends StatelessWidget {
       child: ElevatedButton(onPressed:loading? (){}:onTap,
           style: ElevatedButton.styleFrom(
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(24.r)
+                borderRadius: BorderRadius.circular(8.r)
             ),
             backgroundColor: color??AppColors.primaryColor,
-            minimumSize:Size(width??Get.width, height??53.h),
+            minimumSize:Size(width??Get.width, height??52.h),
 
           ),
           child:loading?  SizedBox(
             height: 20.h,
             width: 20.h,
             child: const CircularProgressIndicator(color: Colors.white,),
-          ):Text(text,style:textStyle?? AppStyles.h3(fontWeight: FontWeight.w500,color:Colors.white),)),
+          ):Text(text,style:textStyle?? AppStyles.h3(fontWeight: FontWeight.w600,color:Colors.white,),)),
     );
   }
 }
