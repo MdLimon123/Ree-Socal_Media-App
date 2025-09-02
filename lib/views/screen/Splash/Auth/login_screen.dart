@@ -1,9 +1,11 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:ree_social_media_app/utils/app_colors.dart';
 import 'package:ree_social_media_app/views/base/custom_button.dart';
 import 'package:ree_social_media_app/views/base/custom_text_field.dart';
+import 'package:ree_social_media_app/views/screen/Splash/Auth/forget_password.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -91,12 +93,17 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(height: 12,),
               Align(
                 alignment: Alignment.centerRight,
-                child: Text("Forgot Password?",
-                style: TextStyle(
-                  color: Color(0xFF799777),
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
-                ),),
+                child: InkWell(
+                  onTap: (){
+                    Get.to(()=> ForgetPassword());
+                  },
+                  child: Text("Forgot Password?",
+                  style: TextStyle(
+                    color: Color(0xFF799777),
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                  ),),
+                ),
               ),
               SizedBox(height: 80,),
               CustomButton(onTap: (){}, text: "Log In"),
