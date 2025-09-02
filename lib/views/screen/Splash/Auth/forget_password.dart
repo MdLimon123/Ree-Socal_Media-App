@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:ree_social_media_app/utils/app_colors.dart';
 import 'package:ree_social_media_app/views/base/custom_button.dart';
 import 'package:ree_social_media_app/views/base/custom_text_field.dart';
+import 'package:ree_social_media_app/views/screen/Splash/Auth/otp_verification_screen.dart';
 
 class ForgetPassword extends StatefulWidget {
 
@@ -71,7 +72,9 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                   )
               ),
               SizedBox(height: 80,),
-              CustomButton(onTap: (){},
+              CustomButton(onTap: (){
+                Get.to(()=> OtpVerificationScreen());
+              },
                   text: "Send Code"),
               SizedBox(height: 12,),
               Row(
@@ -86,7 +89,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                   SizedBox(width: 5,),
                   InkWell(
                     onTap: (){
-                      Get.back();''
+                      Get.back();
                     },
                     child: Text("Log In",
                       style: TextStyle(
