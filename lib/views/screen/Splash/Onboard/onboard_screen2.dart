@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ree_social_media_app/utils/app_colors.dart';
+import 'package:ree_social_media_app/utils/statusbar_color.dart';
 import 'package:ree_social_media_app/views/base/custom_button.dart';
 import 'package:ree_social_media_app/views/screen/Splash/Onboard/onboard_screen3.dart';
 
@@ -12,6 +13,13 @@ class OnboardScreen2 extends StatefulWidget {
 }
 
 class _OnboardScreen2State extends State<OnboardScreen2> {
+
+  @override
+  void initState() {
+    systemStatusBar();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

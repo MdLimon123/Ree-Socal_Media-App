@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:ree_social_media_app/helpers/route.dart';
 import 'package:ree_social_media_app/utils/app_colors.dart';
+import 'package:ree_social_media_app/utils/statusbar_color.dart';
 import 'package:ree_social_media_app/views/base/custom_button.dart';
 
 class OnboardScreen3 extends StatefulWidget {
@@ -10,6 +13,14 @@ class OnboardScreen3 extends StatefulWidget {
 }
 
 class _OnboardScreen3State extends State<OnboardScreen3> {
+
+  @override
+  void initState() {
+    systemStatusBar();
+    super.initState();
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,7 +98,7 @@ class _OnboardScreen3State extends State<OnboardScreen3> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 50),
                 child: CustomButton(onTap: (){
-
+                  Get.offAllNamed(AppRoutes.loginScreen);
                 }, text: "Get Started"),
               )
 
