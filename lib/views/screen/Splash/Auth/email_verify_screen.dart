@@ -5,14 +5,14 @@ import 'package:ree_social_media_app/utils/app_colors.dart';
 import 'package:ree_social_media_app/views/base/custom_button.dart';
 import 'package:ree_social_media_app/views/screen/Splash/Auth/reset_password_screen.dart';
 
-class OtpVerificationScreen extends StatefulWidget {
-  const OtpVerificationScreen({super.key});
+class EmailVerifyScreen extends StatefulWidget {
+  const EmailVerifyScreen({super.key});
 
   @override
-  State<OtpVerificationScreen> createState() => _OtpVerificationScreenState();
+  State<EmailVerifyScreen> createState() => _EmailVerifyScreenState();
 }
 
-class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
+class _EmailVerifyScreenState extends State<EmailVerifyScreen> {
 
   final controllers = List.generate(6, (_) => TextEditingController());
   final nodes = List.generate(6, (_) => FocusNode());
@@ -45,7 +45,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
     } else if (v.isEmpty && i > 0) {
       nodes[i - 1].requestFocus();
     }
-    setState(() {}); 
+    setState(() {});
   }
 
   @override
@@ -84,12 +84,12 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                 ),),
               SizedBox(height: 12,),
               Text("We've sent a 6-digit code ending in 56",
-              style: TextStyle(
-                color: Color(0xFF413E3E),
-                fontSize: 16,
-                fontWeight: FontWeight.w400,
+                style: TextStyle(
+                  color: Color(0xFF413E3E),
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
 
-              ),),
+                ),),
               SizedBox(height: 40,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -100,25 +100,25 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text("Resend code after",
-                  style: TextStyle(
-                    color: Color(0xFF413E3E),
-                    fontSize: 16,
-                    fontWeight: FontWeight.w400,
-                  ),),
+                    style: TextStyle(
+                      color: Color(0xFF413E3E),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                    ),),
                   SizedBox(width: 8,),
                   Text("60s",
-                  style: TextStyle(
-                    color: AppColors.primaryColor,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w400,
-                  ),)
+                    style: TextStyle(
+                      color: AppColors.primaryColor,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                    ),)
                 ],
               ),
               SizedBox(height: 92,),
               CustomButton(onTap: (){
-                Get.to(()=> ResetPasswordScreen());
+
               },
-                  text: "Verify Code")
+                  text: "Verify and Conitnue")
 
 
             ],
@@ -128,7 +128,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
     );
   }
 
-   _otpBox(int i) {
+  _otpBox(int i) {
     final filled = controllers[i].text.isNotEmpty;
 
     return Container(

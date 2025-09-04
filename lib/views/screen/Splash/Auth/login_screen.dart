@@ -6,6 +6,7 @@ import 'package:ree_social_media_app/utils/app_colors.dart';
 import 'package:ree_social_media_app/views/base/custom_button.dart';
 import 'package:ree_social_media_app/views/base/custom_text_field.dart';
 import 'package:ree_social_media_app/views/screen/Splash/Auth/forget_password.dart';
+import 'package:ree_social_media_app/views/screen/Splash/Auth/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -72,7 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),),
               SizedBox(height: 12,),
-              CustomTextField(controller: emailTextController,
+              CustomTextField(controller: passwordTextController,
                 hintText: 'Enter your Password',
                 isPassword: true,
                 prefixIcon: Padding(
@@ -125,6 +126,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             fontWeight: FontWeight.w600),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
+                          Get.to(()=> SignupScreen());
                           },
                       ),
                     ],
