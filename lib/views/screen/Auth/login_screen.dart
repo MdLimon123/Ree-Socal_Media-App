@@ -5,8 +5,9 @@ import 'package:get/get.dart';
 import 'package:ree_social_media_app/utils/app_colors.dart';
 import 'package:ree_social_media_app/views/base/custom_button.dart';
 import 'package:ree_social_media_app/views/base/custom_text_field.dart';
-import 'package:ree_social_media_app/views/screen/Splash/Auth/forget_password.dart';
-import 'package:ree_social_media_app/views/screen/Splash/Auth/signup_screen.dart';
+import 'package:ree_social_media_app/views/screen/Auth/forget_password.dart';
+import 'package:ree_social_media_app/views/screen/Auth/signup_screen.dart';
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

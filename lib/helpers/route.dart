@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
+import 'package:ree_social_media_app/views/screen/Auth/login_screen.dart';
 import 'package:ree_social_media_app/views/screen/Home/home_screen.dart';
 import 'package:ree_social_media_app/views/screen/Profile/profile_screen.dart';
-import 'package:ree_social_media_app/views/screen/Splash/Auth/login_screen.dart';
 import 'package:ree_social_media_app/views/screen/Wallet/wallet_screen.dart';
 
 

@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:ree_social_media_app/utils/app_colors.dart';
 import 'package:ree_social_media_app/views/base/custom_button.dart';
-import 'package:ree_social_media_app/views/screen/Splash/Auth/reset_password_screen.dart';
+import 'package:ree_social_media_app/views/screen/Auth/reset_password_screen.dart';
 
 class OtpVerificationScreen extends StatefulWidget {
   const OtpVerificationScreen({super.key});
