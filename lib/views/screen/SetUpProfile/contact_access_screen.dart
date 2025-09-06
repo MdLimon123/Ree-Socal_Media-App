@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:ree_social_media_app/utils/app_colors.dart';
 import 'package:ree_social_media_app/views/base/custom_button.dart';
+import 'package:ree_social_media_app/views/screen/SetUpProfile/invite_friend_screen.dart';
 
 class ContactAccessScreen extends StatefulWidget {
   const ContactAccessScreen({super.key});
@@ -83,7 +85,7 @@ class _ContactAccessScreenState extends State<ContactAccessScreen> {
               ),
               SizedBox(height: 20,),
               CustomButton(onTap: (){
-
+                Get.to(()=> InviteFriendScreen());
               },
                   text: "Allow Access")
 

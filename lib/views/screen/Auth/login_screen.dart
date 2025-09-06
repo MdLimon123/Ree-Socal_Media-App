@@ -7,6 +7,7 @@ import 'package:ree_social_media_app/views/base/custom_button.dart';
 import 'package:ree_social_media_app/views/base/custom_text_field.dart';
 import 'package:ree_social_media_app/views/screen/Auth/forget_password.dart';
 import 'package:ree_social_media_app/views/screen/Auth/signup_screen.dart';
+import 'package:ree_social_media_app/views/screen/Message/message_screen.dart';
 
 
 class LoginScreen extends StatefulWidget {
@@ -108,7 +109,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               SizedBox(height: 80,),
-              CustomButton(onTap: (){}, text: "Log In"),
+              CustomButton(onTap: (){
+                Get.to(()=> MessageScreen());
+              }, text: "Log In"),
               SizedBox(height: 12,),
               Center(
                 child: RichText(
