@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:ree_social_media_app/utils/app_colors.dart';
 import 'package:ree_social_media_app/views/base/bottom_menu..dart';
+import 'package:ree_social_media_app/views/screen/Message/AllSubScreen/chat_screen.dart';
 
 class MessageScreen extends StatefulWidget {
   const MessageScreen({super.key});
@@ -237,75 +239,80 @@ class _MessageScreenState extends State<MessageScreen> {
                   itemCount: chats.length,
                   separatorBuilder: (_, __) => SizedBox(height: 16),
                   itemBuilder: (context, index) {
-                    return Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        /// Profile
-                        Container(
-                          height: 44,
-                          width: 44,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: DecorationImage(
-                              image: AssetImage(chats[index]["image"]),
-                              fit: BoxFit.cover,
+                    return InkWell(
+                      onTap: (){
+                        Get.to(()=> ChatScreen());
+                      },
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          /// Profile
+                          Container(
+                            height: 44,
+                            width: 44,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: DecorationImage(
+                                image: AssetImage(chats[index]["image"]),
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
-                        ),
-                        SizedBox(width: 12),
+                          SizedBox(width: 12),
 
-                        /// Name + Message
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                children: [
-                                  Text(
-                                    chats[index]["name"],
-                                    style: TextStyle(
-                                      color: Color(0xFF676565),
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                  SizedBox(width: 6),
-                                  if (chats[index]["active"])
-                                    Container(
-                                      height: 10,
-                                      width: 10,
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        color: AppColors.primaryColor,
+                          /// Name + Message
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text(
+                                      chats[index]["name"],
+                                      style: TextStyle(
+                                        color: Color(0xFF676565),
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w600,
                                       ),
                                     ),
-                                ],
-                              ),
-                              SizedBox(height: 4),
-                              Text(
-                                chats[index]["message"],
-                                style: TextStyle(
-                                  color: chats[index]["isVideo"] == true
-                                      ? AppColors.primaryColor //
-                                      : Color(0xFF676565),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
+                                    SizedBox(width: 6),
+                                    if (chats[index]["active"])
+                                      Container(
+                                        height: 10,
+                                        width: 10,
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: AppColors.primaryColor,
+                                        ),
+                                      ),
+                                  ],
                                 ),
-                              ),
-                            ],
+                                SizedBox(height: 4),
+                                Text(
+                                  chats[index]["message"],
+                                  style: TextStyle(
+                                    color: chats[index]["isVideo"] == true
+                                        ? AppColors.primaryColor //
+                                        : Color(0xFF676565),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
 
-                        /// Time
-                        Text(
-                          chats[index]["time"],
-                          style: TextStyle(
-                            color: Color(0xFF807E7E),
-                            fontSize: 12,
-                            fontWeight: FontWeight.w400,
+                          /// Time
+                          Text(
+                            chats[index]["time"],
+                            style: TextStyle(
+                              color: Color(0xFF807E7E),
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     );
                   },
                 ),

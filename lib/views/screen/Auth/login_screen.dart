@@ -59,6 +59,8 @@ class _LoginScreenState extends State<LoginScreen> {
               CustomTextField(controller: emailTextController,
               hintText: 'Enter your phone number or email',
               isEmail: true,
+              borderSide: BorderSide(color: Color(0xFFC4C3C3),
+                  width: 1),
               prefixIcon: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
@@ -78,6 +80,8 @@ class _LoginScreenState extends State<LoginScreen> {
               CustomTextField(controller: passwordTextController,
                 hintText: 'Enter your Password',
                 isPassword: true,
+                borderSide: BorderSide(color: Color(0xFFC4C3C3),
+                    width: 1),
                 prefixIcon: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(

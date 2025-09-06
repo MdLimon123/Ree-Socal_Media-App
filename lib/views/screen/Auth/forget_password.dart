@@ -55,6 +55,8 @@ class _ForgetPasswordState extends State<ForgetPassword> {
               SizedBox(height: 40,),
               CustomTextField(controller: emailTextController,
               hintText: 'Enter your phone number or email',
+                  borderSide: BorderSide(color: Color(0xFFC4C3C3),
+                      width: 1),
                   prefixIcon: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(

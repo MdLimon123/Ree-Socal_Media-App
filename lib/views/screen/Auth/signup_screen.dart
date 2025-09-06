@@ -64,6 +64,8 @@ class _SignupScreenState extends State<SignupScreen> {
               CustomTextField(controller: emailTextController,
                 hintText: 'Enter your phone number or email',
                 isEmail: true,
+                borderSide: BorderSide(color: Color(0xFFC4C3C3),
+                    width: 1),
                 prefixIcon: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
@@ -82,6 +84,8 @@ class _SignupScreenState extends State<SignupScreen> {
               SizedBox(height: 12,),
               CustomTextField(controller: passwordTextController,
                 hintText: 'Enter your Password',
+                borderSide: BorderSide(color: Color(0xFFC4C3C3),
+                    width: 1),
                 isPassword: true,
                 prefixIcon: Padding(
                   padding: const EdgeInsets.all(8.0),
